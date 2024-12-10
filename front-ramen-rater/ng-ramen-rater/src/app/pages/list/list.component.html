@@ -1,0 +1,34 @@
+<div class="container my-4">
+    <h1 class="text-center mb-4">Ramen List</h1>
+  
+    <!-- Tabla para listar los ramen -->
+    <div class="table-responsive">
+      <table class="table table-striped table-hover">
+        <thead class="table-dark">
+          <tr>
+            <th>#</th>
+            <th>Brand</th>
+            <th>Variety</th>
+            <th>Style</th>
+            <th>Country</th>
+            <th>Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+        @for (ramen of ramenList; track ramen.id) {
+          <tr>
+            <td>{{ ramen.id }}</td>
+            <td>{{ ramen.brand }}</td>
+            <td>{{ ramen.variety }}</td>
+            <td>{{ ramen.style }}</td>
+            <td>{{ ramen.country }}</td>
+            <td>{{ ramen.stars }}</td>
+            <td>
+                <a class="btn btn-info" [routerLink]="['view', ramen.id]">View</a>
+            </td>
+          </tr>
+        }
+        </tbody>
+      </table>
+    </div>
+  </div>

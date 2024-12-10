@@ -1,3 +1,4 @@
+export const RAMEN_DATA = 
 [
     {
         "Review #": "4650",
