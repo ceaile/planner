@@ -26,11 +26,14 @@ constructor() {
   }
 
   getRamenById(id:string): RamenDTO|null {
+    console.log("getting ramen service  to get ramen by id");
     const ramen =  this.parsedRamenDb.find(ramen=> ramen.id === id)
     if (ramen){
+      console.log("it worked! we got the ramen");
       return ramen;
     } else {
-      return null
+      console.log("faillll :( couldnt find ramen");
+      return null;
     }
   }
 
